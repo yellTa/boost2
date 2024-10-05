@@ -1,11 +1,14 @@
 package boost.chaper2.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Task {
     int user_id;
     String title;
+    @JsonFormat(pattern = "yyyy.MM.dd HH:mm:ss")
     Date date;
     String owner;
     int priority;
