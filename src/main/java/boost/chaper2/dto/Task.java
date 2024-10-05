@@ -36,9 +36,7 @@ public class Task {
         return title;
     }
 
-    public String getDate() {
-        return date;
-    }
+    public Date getDate() {return date;}
 
     public String getOwner() {
         return owner;
