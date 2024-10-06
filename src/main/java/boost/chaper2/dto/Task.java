@@ -8,22 +8,22 @@ import java.util.Date;
 public class Task {
     int user_id;
     String title;
-    @JsonFormat(pattern = "yyyy.MM.dd HH:mm:ss")
-    Date date;
+    @JsonFormat(pattern = "yyyy.MM.dd")
+    java.sql.Date date;
     String owner;
     int priority;
 
     public Task(){
 
     }
-    public Task(String title, Date date, String owner, int priority){
+    public Task(String title, java.sql.Date date, String owner, int priority){
         this.title= title;
         this.date = date;
         this.owner = owner;
         this.priority = priority;
     }
 
-    public Task(int userId,String title, Date date, String owner, int priority){
+    public Task(int userId,String title, java.sql.Date date, String owner, int priority){
         this.user_id = userId;
         this.title= title;
         this.date = date;
@@ -39,7 +39,7 @@ public class Task {
         return title;
     }
 
-    public Date getDate() {return date;}
+    public java.sql.Date getDate() {return date;}
 
     public String getOwner() {
         return owner;
