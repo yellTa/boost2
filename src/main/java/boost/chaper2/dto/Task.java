@@ -13,22 +13,19 @@ public class Task {
     String owner;
     int priority;
 
+    String progress;
+
     public Task(){
 
     }
-    public Task(String title, java.sql.Date date, String owner, int priority){
-        this.title= title;
-        this.date = date;
-        this.owner = owner;
-        this.priority = priority;
-    }
 
-    public Task(int userId,String title, java.sql.Date date, String owner, int priority){
+    public Task(int userId,String title, java.sql.Date date, String owner, int priority, String progress){
         this.user_id = userId;
         this.title= title;
         this.date = date;
         this.owner = owner;
         this.priority = priority;
+        this.progress = progress;
     }
 
     public int getUser_id() {
