@@ -6,14 +6,14 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Date;
 
 public class Task {
-    int user_id;
-    String title;
+    private int user_id;
+    private String title;
     @JsonFormat(pattern = "yyyy.MM.dd")
-    java.sql.Date date;
-    String owner;
-    int priority;
+    private java.sql.Date date;
+    private String owner;
+    private int priority;
 
-    String progress;
+    private String progress;
 
     public Task(){
 
