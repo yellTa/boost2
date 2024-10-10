@@ -1,10 +1,7 @@
 package boost.chaper2.dao;
 
 import boost.chaper2.dto.Task;
-import com.mysql.cj.jdbc.AbandonedConnectionCleanupThread;
-
 import java.sql.*;
-import java.util.Enumeration;
 
 public class TaskDao {
     private static String url = "jdbc:mysql://localhost:3306/tables_in_connectdb";
@@ -40,5 +37,4 @@ public class TaskDao {
             e.printStackTrace();
         }
     }
-
 }
