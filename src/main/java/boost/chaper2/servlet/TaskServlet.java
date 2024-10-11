@@ -3,10 +3,8 @@ package boost.chaper2.servlet;
 import boost.chaper2.dao.TaskDao;
 import boost.chaper2.dto.Task;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
-import javax.servlet.*;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 

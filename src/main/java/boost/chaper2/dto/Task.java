@@ -12,16 +12,15 @@ public class Task {
     private Date date;
     private String owner;
     private int priority;
-
     private String progress;
 
-    public Task(){
+    public Task() {
 
     }
 
-    public Task(int userId,String title, Date date, String owner, int priority, String progress){
+    public Task(int userId, String title, Date date, String owner, int priority, String progress) {
         this.user_id = userId;
-        this.title= title;
+        this.title = title;
         this.date = date;
         this.owner = owner;
         this.priority = priority;
@@ -36,7 +35,9 @@ public class Task {
         return title;
     }
 
-    public Date getDate() {return date;}
+    public Date getDate() {
+        return date;
+    }
 
     public String getOwner() {
         return owner;
