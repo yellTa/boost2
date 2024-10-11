@@ -31,7 +31,7 @@ public class TaskDao {
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, task.getTitle());
-            ps.setDate(2, task.getDate());
+            ps.setDate(2, new java.sql.Date(task.getDate().getTime()));
             ps.setString(3, task.getOwner());
             ps.setInt(4, task.getPriority());
             ps.executeUpdate();

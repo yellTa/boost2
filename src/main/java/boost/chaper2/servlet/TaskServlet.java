@@ -35,8 +35,6 @@ public class TaskServlet extends HttpServlet {
 
         String jsonString = jsonRead.toString();
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.registerModule(new JavaTimeModule());
-        objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         Task task = objectMapper.readValue(jsonString, Task.class);
 
         TaskDao dao = new TaskDao();

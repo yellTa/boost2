@@ -9,7 +9,7 @@ public class Task {
     private int user_id;
     private String title;
     @JsonFormat(pattern = "yyyy.MM.dd")
-    private java.sql.Date date;
+    private Date date;
     private String owner;
     private int priority;
 
@@ -19,7 +19,7 @@ public class Task {
 
     }
 
-    public Task(int userId,String title, java.sql.Date date, String owner, int priority, String progress){
+    public Task(int userId,String title, Date date, String owner, int priority, String progress){
         this.user_id = userId;
         this.title= title;
         this.date = date;
@@ -36,7 +36,7 @@ public class Task {
         return title;
     }
 
-    public java.sql.Date getDate() {return date;}
+    public Date getDate() {return date;}
 
     public String getOwner() {
         return owner;
