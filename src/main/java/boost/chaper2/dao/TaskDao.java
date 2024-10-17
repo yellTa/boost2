@@ -108,16 +108,12 @@ public class TaskDao {
             } catch (SQLException e) {
 
             }
-
-            System.out.println(object.toString());
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
 
-        return "asdf";
+        return object.toString();
     }
 
     public void saveData(Task task) {
