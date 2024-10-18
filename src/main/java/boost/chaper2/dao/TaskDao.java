@@ -6,6 +6,7 @@ import com.mysql.cj.jdbc.AbandonedConnectionCleanupThread;
 import org.json.JSONObject;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -14,6 +15,7 @@ public class TaskDao {
     private static String url = "jdbc:mysql://localhost:3306/tables_in_connectdb";
     private static String user = "boost";
     private static String password = "boost";
+
 
     static {
         try {
@@ -118,12 +120,12 @@ public class TaskDao {
 
     public void saveData(Task task) {
         String sql = "INSERT INTO tasks (title, date, owner, priority) VALUES(?,?,?,?)";
-
+        Date today = Date.valueOf(LocalDate.now());
         try (Connection conn = getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, task.getTitle());
-            ps.setDate(2, new java.sql.Date(task.getDate().getTime()));
+            ps.setDate(2, new java.sql.Date(today.getTime()));
             ps.setString(3, task.getOwner());
             ps.setInt(4, task.getPriority());
             ps.executeUpdate();

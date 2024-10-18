@@ -40,3 +40,8 @@ build/
 
 ### custom Ignore ###
 /web/WEB-INF/web.xml
+out
+data
+lib
+pom.xml
+
