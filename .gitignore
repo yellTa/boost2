@@ -39,4 +39,4 @@ build/
 .DS_Store
 
 ### custom Ignore ###
-/web
+/web/WEB-INF/web.xml
