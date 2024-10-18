@@ -10,12 +10,18 @@ import javax.servlet.http.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/task")
 public class TaskServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        response.setContentType("application/json;charset=UTF-8");
+        TaskDao taskDao = new TaskDao();
+        String result = taskDao.readData();
+        PrintWriter out = response.getWriter();
+        out.print(result);
+        out.close();
     }
 
     @Override
