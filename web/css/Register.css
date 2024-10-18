@@ -22,13 +22,12 @@ body {
     margin: 0 auto;
 }
 
-.contents > section > article {
+.contents > section > form > article {
     margin: 10px 0 20px 0px;
     height: 100px;
-
 }
 
-.contents > section > article > div > input.text {
+.contents > section > form > article > div > input.text {
     font-family: GmarketSansMedium;
     height: 50px;
     font-size: 18px;
@@ -36,12 +35,12 @@ body {
     border-color: rgba(0, 0, 0, 0.13);
 }
 
-.contents > section > article > div.radioContainer {
+.contents > section > form > article > div.radioContainer {
     display: flex;
     align-items: center;
 }
 
-.contents > section > article > div > input {
+.contents > section > form > article > div > input {
     font-family: GmarketSansMedium;
     height: 50px;
     width: 20px;
@@ -49,7 +48,7 @@ body {
     border-color: rgba(0, 0, 0, 0.13);
 }
 
-.contents > section > article > div > input[type="radio"] {
+.contents > section > form > article > div > input[type="radio"] {
     font-family: GmarketSansMedium;
     height: 50px;
     width: 20px;
@@ -58,26 +57,27 @@ body {
     border-color: rgba(0, 0, 0, 0.13);
 }
 
-.contents > section > article > div > label {
+.contents > section > form > article > div > label {
     font-family: GmarketSansMedium;
     width: 70px;
     font-size: 18px;
     border-color: rgba(0, 0, 0, 0.13);
 }
 
-.contents > section > article > div > span {
+.contents > section > form > article > div > span {
     font-size: 25px;
     color: darkgray;
 }
 
-.contents > section > article > div.buttonContainer {
+.contents > section  > article > div.buttonContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    margin: 0;
+    width: 600px;
 }
 
-.contents > section > article > div.buttonContainer > button {
+.contents > section  >article > div.buttonContainer > button {
     width: 120px;
     height: 40px;
     font-family: GmarketSansMedium;
@@ -86,17 +86,22 @@ body {
     border-color: rgba(0, 0, 0, 0.13);
 }
 
+.contents > section  >article > div.buttonContainer  > div{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
 .contents > section > article > div.buttonContainer > button.left {
     color: rgb(128, 128, 128);
-
     background-color: #fff;
 }
 
 
-.contents > section > article > div.buttonContainer > div > button.right {
+.contents > section  >article > div.buttonContainer > div > button.right {
     width: 120px;
     background-color: cornflowerblue;
-    margin-left: 5px;
     height: 40px;
     color: white;
     border-color: rgba(0, 0, 0, 0.13);
