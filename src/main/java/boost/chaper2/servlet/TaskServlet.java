@@ -17,8 +17,8 @@ public class TaskServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json;charset=UTF-8");
-        TaskDao taskDao = new TaskDao();
-        String result = taskDao.readData();
+        TaskDao taskDAO = new TaskDao();
+        String result = taskDAO.readData();
         PrintWriter out = response.getWriter();
         out.print(result);
         out.close();
