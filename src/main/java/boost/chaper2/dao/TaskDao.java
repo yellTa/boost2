@@ -1,5 +1,6 @@
 package boost.chaper2.dao;
 
+import boost.chaper2.DatabaseConnector;
 import boost.chaper2.dto.Task;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mysql.cj.jdbc.AbandonedConnectionCleanupThread;
@@ -12,23 +13,6 @@ import java.util.Enumeration;
 import java.util.List;
 
 public class TaskDao {
-    private static String url = "jdbc:mysql://localhost:3306/tables_in_connectdb";
-    private static String user = "boost";
-    private static String password = "boost";
-
-
-    static {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(url, user, password);
-    }
-
     public String readData() {
         String todoSql = "SELECT * FROM tasks WHERE progress='todo'";
         String doneSql = "SELECT * FROM tasks WHERE progress='done'";
@@ -36,7 +20,8 @@ public class TaskDao {
 
         JSONObject object = new JSONObject();
 
-        try (Connection conn = getConnection()) {
+        //왜 trhead safe한지...
+        try (Connection conn = DatabaseConnector.getConnection()) {
             //todo
             List<Task> tasks = new ArrayList<>();
             try (PreparedStatement ps = conn.prepareStatement(todoSql)) {
@@ -121,7 +106,7 @@ public class TaskDao {
     public void saveData(Task task) {
         String sql = "INSERT INTO tasks (title, date, owner, priority) VALUES(?,?,?,?)";
         Date today = Date.valueOf(LocalDate.now());
-        try (Connection conn = getConnection();
+        try (Connection conn = DatabaseConnector.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, task.getTitle());
