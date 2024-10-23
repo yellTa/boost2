@@ -9,6 +9,11 @@ body {
     font-family: GmarketSansMedium;
 }
 
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
 .contents {
     width: 600px;
     height: 800px;
@@ -69,7 +74,7 @@ body {
     color: darkgray;
 }
 
-.contents > section  > article > div.buttonContainer {
+.contents > section > form > article > div.buttonContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,7 +82,7 @@ body {
     width: 600px;
 }
 
-.contents > section  >article > div.buttonContainer > button {
+.contents > section > form > article > div.buttonContainer > button {
     width: 120px;
     height: 40px;
     font-family: GmarketSansMedium;
@@ -86,20 +91,22 @@ body {
     border-color: rgba(0, 0, 0, 0.13);
 }
 
-.contents > section  >article > div.buttonContainer  > div{
+.contents > section > form > article > div.buttonContainer > div {
     text-align: left;
     margin: 0;
     padding: 0;
     width: auto;
 }
 
-.contents > section > article > div.buttonContainer > button.left {
+.contents > section > form > article > div.buttonContainer > button.left {
+    text-decoration: none;
+    color: inherit;
     color: rgb(128, 128, 128);
     background-color: #fff;
 }
 
 
-.contents > section  >article > div.buttonContainer > div > button.right {
+.contents > section > form > article > div.buttonContainer > div > button.right {
     width: 120px;
     background-color: cornflowerblue;
     height: 40px;

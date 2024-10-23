@@ -12,7 +12,24 @@
 </head>
 <body>
 
-<h1>main</h1>
+<header>
+    <div>
+
+    </div>
+</header>
+<section>
+    <article>
+        <div></div>
+
+    </article>
+    <article>
+        <div></div>
+    </article>
+    <article>
+        <div></div>
+    </article>
+</section>
+
 
 </body>
 </html>

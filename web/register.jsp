@@ -25,7 +25,7 @@
                     <span>어떤 일인가요?</span>
                 </div>
                 <div>
-                    <input type="text" class="text" id="title" maxlength="24" placeholder="우리집 강아지 귀여워(24자까지)" required>
+                    <input type="text" class="text" id="title" name="title" maxlength="24" placeholder="우리집 강아지 귀여워(24자까지)" required>
                 </div>
             </article>
             <article>
@@ -33,7 +33,7 @@
                     <span>누가 할일인가요?</span>
                 </div>
                 <div>
-                    <input type="text" class="text" style="width:300px;" id="owner" maxlength="10"
+                    <input type="text" class="text" name="owner" style="width:300px;" id="owner" maxlength="10"
                            placeholder="이름을 입력해주세요"
                            required>
                 </div>
@@ -43,7 +43,7 @@
                     <span>우선순위를 선택하세요</span>
                 </div>
                 <div class="radioContainer">
-                    <input type="radio" id="priority1" name="priority" value="1">
+                    <input type="radio" id="priority1" name="priority" value="1" checked>
                     <label for="priority1">1순위</label><br>
 
                     <input type="radio" id="priority2" name="priority" value="2">
@@ -53,16 +53,17 @@
                     <label for="priority3">3순위</label><br>
                 </div>
             </article>
-        </form>
+
         <article>
             <div class="buttonContainer">
-                <button class="left"><span><이전</span></button>
+                <button class="left"><a href="http://localhost:8080/" class="left"><이전</a></button>
                 <div>
-                    <button class="right">제출</button>
+                    <button class="right" type ='submit' id ="submitBtn">제출</button>
                     <button class="right" id="removeBtn">내용지우기</button>
                 </div>
             </div>
         </article>
+        </form>
     </section>
 </div>
 </body>
